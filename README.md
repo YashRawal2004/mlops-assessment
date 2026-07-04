@@ -8,16 +8,16 @@ This repository contains a lightweight, production-ready MLOps batch job pipelin
 
 Here is a guide to the project files:
 
-*   **[run.py](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/run.py)**: The main execution script. Key functions include:
-    *   `[setup_logger](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/run.py#L13-L26)`: Configures the execution logging behavior.
-    *   `[write_metrics](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/run.py#L28-L31)`: Standardizes metrics output structure to JSON.
-    *   `[main](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/run.py#L33-L151)`: Orchestrates the batch workflow (configuration loading, raw data cleaning, signal generation, metrics calculation, and robust error handling).
-*   **[config.yaml](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/config.yaml)**: Controls parameters like random seed, rolling window size, and app version.
-*   **[data.csv](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/data.csv)**: Input CSV containing raw Bitcoin transaction/ohlc metrics.
-*   **[Dockerfile](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/Dockerfile)**: Docker container configuration for packaging and running the batch job.
-*   **[requirements.txt](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/requirements.txt)**: Python package dependencies (`numpy`, `pandas`, `PyYAML`).
-*   **[main.ipynb](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/main.ipynb)**: Jupyter notebook used for prototyping, exploration, and step-by-step logic development.
-*   **[error_datasets](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/error_datasets)**: Collection of invalid/malformed datasets used to verify error handling and robust performance.
+*   **[run.py]**: The main execution script. Key functions include:
+    *   `[setup_logger]`: Configures the execution logging behavior.
+    *   `[write_metrics]`: Standardizes metrics output structure to JSON.
+    *   `[main]`: Orchestrates the batch workflow (configuration loading, raw data cleaning, signal generation, metrics calculation, and robust error handling).
+*   **[config.yaml]**: Controls parameters like random seed, rolling window size, and app version.
+*   **[data.csv]**: Input CSV containing raw Bitcoin transaction/ohlc metrics.
+*   **[Dockerfile]**: Docker container configuration for packaging and running the batch job.
+*   **[requirements.txt]**: Python package dependencies (`numpy`, `pandas`, `PyYAML`).
+*   **[main.ipynb]**: Jupyter notebook used for prototyping, exploration, and step-by-step logic development.
+*   **[error_datasets]**: Collection of invalid/malformed datasets used to verify error handling and robust performance.
 
 ---
 
@@ -85,7 +85,7 @@ docker run --rm mlops-signal-generator
 
 ## Robust Error Validation
 
-The script checks for common data failures and reports metrics with a `"status": "error"` indicator. You can test validation scenarios using files from the **[error_datasets](file:///c:/Users/HP/OneDrive/Desktop/Internship%20Doc/Primetrade.ai/ML%20Intern/Assesement/error_datasets)** directory:
+The script checks for common data failures and reports metrics with a `"status": "error"` indicator. You can test validation scenarios using files from the **[error_datasets]** directory:
 
 *   **`empty.csv`**: Tests behavior with empty input files.
 *   **`corrupted.csv`**: Tests behavior with malformed or un-parsable CSV records.
